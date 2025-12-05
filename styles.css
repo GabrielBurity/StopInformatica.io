@@ -147,6 +147,7 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        justify-content: center;
     }
 
     .Caixa-Texto {
@@ -182,5 +183,6 @@ body {
         clip-path: circle(350px at center);
     }
 }
+
 
 
