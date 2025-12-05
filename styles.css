@@ -121,12 +121,6 @@ body {
     z-index: -1;
 }
 
-html, body {
-    overflow: hidden;
-    height: 100vh;
-}
-
-
 /* Responsivo */
 @media (max-width: 768px) {
     body {
@@ -188,4 +182,5 @@ html, body {
         clip-path: circle(350px at center);
     }
 }
+
 
