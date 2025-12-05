@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopInformatica</title>
+
+    <!-- Correção do link CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="circulo"></div>
+
+    <img src="img/imagem-logo-stop.png" alt="imagem-logo-stopinformatica">
+
+    <!-- Ajuste do nome da classe -->
+    <div class="Conteudo">
+
+        <div class="Caixa-Texto">
+            <h1>Venha conhecer
+                <br><span>A Stop Informatica!</span>
+            </h1>
+
+            <p>A Stop Informática é uma loja de peças de computador,
+                <br>periféricos, suprimentos de informática ou serviço de
+                <br>manutenção, sem recorrer necessariamente a lojas
+                <br>grandes ou compras onlines.
+            </p>
+
+            <a class="btn-zap" 
+               href="https://wa.me/5583988954419?text=Olá!%20Tenho%20interesse%20nos%20produtos%20da%20Stop%20Informática."
+               target="_blank">
+               Acesse nosso Whatsapp!
+            </a>
+        </div>
+
+        <div class="Caixa-imagem">
+            <img class="mouse-grande" src="img/img-1-png.png" alt="imagem-principal">
+        </div>
+
+    </div>
+
+    <div class="Menu">
+
+        <img class="botao-menu" src="img/img-1-png.png" alt="botao-menu1"
+         onclick="trocaCor('#0aad'); trocaProduto('img/thumb1.png')">
+
+        <img class="botao-menu" src="img/img-2-png.png" alt="botao-menu2"
+         onclick="trocaCor('#010aad'); trocaProduto('img/thumb2.png')">
+
+        <img class="botao-menu" src="img/img-3-png.png" alt="botao-menu3"
+         onclick="trocaCor('#9b111e'); trocaProduto('img/thumb3.png')">
+
+    </div>
+
+</body>
+
+<!-- Correção do script -->
+<script src="scripts.js"></script>
+
+</html>
