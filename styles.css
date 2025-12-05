@@ -5,10 +5,16 @@
     font-family: "Poppins", sans-serif;
 }
 
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* impede rolagem lateral que causava o fundo bugado */
+}
+
 img[alt="imagem-logo-stopinformatica"] {
     height: 120px;
 }
 
+/* Layout principal */
 .Conteudo {
     width: 100%;
     display: flex;
@@ -18,7 +24,7 @@ img[alt="imagem-logo-stopinformatica"] {
 }
 
 .Caixa-Texto {
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 h1 {
@@ -27,7 +33,7 @@ h1 {
     font-weight: bold;
 }
 
-/* 🔹 faz o título principal ficar em uma linha */
+/* Mantém A Stop Informática na mesma linha */
 h1 span {
     display: inline-block;
     white-space: nowrap;
@@ -41,17 +47,25 @@ p {
 span {
     color: #70cbff;
     font-size: 70px;
-    font-weight: 900px;
+    font-weight: 900;
     white-space: nowrap;
 }
 
 body {
     background-image: url(img/img-de-fundo2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* garante que o fundo preenche mesmo se algo expandir */
+    min-height: 100vh;
+
     padding-top: 20px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
+/* Botão WhatsApp */
 .btn-zap {
     display: inline-block;
     padding: 12px 18px;
@@ -70,6 +84,7 @@ body {
     background-color: #2fc764;
 }
 
+/* Menu */
 .Menu img {
     height: 80px;
     cursor: pointer;
@@ -90,26 +105,25 @@ body {
     transform: translateY(-30px);
 }
 
+/* Área da imagem */
 .Caixa-imagem {
     display: flex;
     justify-content: flex-end;
-    width: 1600px;
-
-    /* 🔹 fixa a imagem sem empurrar o texto */
-    margin-top: 0;
+    width: 50%;
     position: relative;
 }
 
+/* Mouse grande fixo no local sem empurrar o texto */
 .mouse-grande {
     width: 420px;
     height: 420px;
     object-fit: contain;
-
     position: absolute;
-    right: 0px;   /* move para esquerda/direita */
-    top: 100px;    /* controla altura */
+    right: 40px;
+    top: 100px;
 }
 
+/* Círculo */
 .circulo {
     background: #0aad;
     clip-path: circle(600px at right 800px);
@@ -121,8 +135,10 @@ body {
     z-index: -1;
 }
 
-/* Responsivo */
+/* ====================== RESPONSIVO ====================== */
+
 @media (max-width: 768px) {
+
     body {
         padding: 20px;
         background-size: cover;
@@ -154,19 +170,10 @@ body {
         margin-top: 20px;
     }
 
-    .Caixa-imagem {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-        display: none;
-    }
-
+    /* some com a imagem no celular */
+    .Caixa-imagem,
     .mouse-grande {
-        width: 250px;
-        height: auto;
-        margin-top: 40px;
-        margin-right: 0; /* 🔹 centraliza no celular */
+        display: none;
     }
 
     .Menu {
@@ -183,6 +190,3 @@ body {
         clip-path: circle(350px at center);
     }
 }
-
-
-
