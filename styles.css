@@ -164,6 +164,7 @@ html, body {
         display: flex;
         justify-content: center;
         margin-top: 0;
+        display: none;
     }
 
     .mouse-grande {
@@ -187,3 +188,4 @@ html, body {
         clip-path: circle(350px at center);
     }
 }
+
